@@ -1,0 +1,62 @@
+#+TITLE: Monitoring @ Avencall
+#+OPTIONS: num:nil
+#+OPTIONS: toc:nil 
+#+OPTIONS: reveal_title_slide:nil
+#+OPTIONS: reveal_slide_number:nil
+#+REVEAL_HLEVEL: 1
+#+REVEAL_THEME: solarized
+#+REVEAL_EXTRA_CSS: style.css
+
+
+* Monitoring et Supervision d'un système de communications
+
+* Qui sommes-nous ?
+[[./img/logo_avencall.png]]
+- Open source software editor
+
+** XiVO Solution
+[[./img/logo_xivo.png]]
+
+- Open Source IPBX based on Asterisk™ 
+- Phone Device Management
+- Call routing
+- Call Center Solution 
+- Computer telephony Integration
+
+** XiVO Architecture overview
+[[./img/xivo-overview.png]]
+
+* Pourquoi superviser
+- Notification en cas de problème
+- Anticipation des problèmes
+- Post-mortem
+
+* Premières tentatives
+
+** Embarqué
+Mono serveur
+
+** Evaluations solutions
+
+- nagios
+- shinken
+- grafana, graphite, collectd
+
+* Monitoring overview
+
+* Metriques ?
+- données non structurées vs données structurées
+
+** Système
+
+** Application
+
+** Limites
+
+Métier, éthique
+
+* Stockage ? 
+
+* Restitution
+
+* Alerting
