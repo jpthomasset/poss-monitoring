@@ -68,6 +68,7 @@ TO BE UPDATED
 
 ** Mais...
 #+ATTR_REVEAL: :frag (appear)
+- Fonctionnalités limitées
 - Difficile à maintenir
 - Pas de centralisation
 
@@ -80,9 +81,9 @@ TO BE UPDATED
 
 ** Mise en oeuvre
 #+ATTR_REVEAL: :frag (appear)
-- docker pour la partie serveur
-- collectd pour la collecte des mesures génériques
-- push depuis les applications
+- Docker pour la partie serveur
+- `collectd` pour la collecte des mesures génériques
+- Push depuis les applications (simple socket)
 
 * Metriques
 
@@ -93,6 +94,8 @@ TO BE UPDATED
 #+ATTR_REVEAL: :frag (appear)
 - Données horodatées
 - Données numériques
+- Source
+- Categorisation
 
 ** Système
 - CPU
