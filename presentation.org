@@ -35,7 +35,7 @@
 - La plupart du temps, ça ne sert à rien
 #+ATTR_REVEAL: :frag appear
 #+BEGIN_QUOTE
-“En supervision, on est de nazes !” @@html:<div align="right"><i>E.A.</i></div>@@
+“En supervision, on est des nazes !” @@html:<div align="right"><i>E.A.</i></div>@@
 #+END_QUOTE
 #+ATTR_REVEAL: :frag appear
 (Enfin, surtout personne ne veut le faire)
@@ -81,10 +81,10 @@
 
 * Metriques
 
-** Données non-structurée
+** Données non-structurées
 [[./img/log.jpg]]
 
-** Données structurée
+** Données structurées
 #+ATTR_REVEAL: :frag (appear)
 - Données horodatées
 - Données numériques
@@ -119,7 +119,7 @@
 * Stockage
 Doit être pensé très tôt.
 #+ATTR_REVEAL: :frag (appear)
-- Retention
+- Rétention
 - Granularité
 
 * Restitution
