@@ -30,14 +30,14 @@
 
 
 <section>
-<section id="slide-org6779db0">
-<h2 id="org6779db0">Monitoring et Supervision d'un système de communications</h2>
+<section id="slide-org6773c79">
+<h2 id="org6773c79">Monitoring et Supervision d'un système de communications</h2>
 
 </section>
 </section>
 <section>
-<section id="slide-org658d787">
-<h2 id="org658d787">Qui sommes-nous ?</h2>
+<section id="slide-org6fc6b0c">
+<h2 id="org6fc6b0c">Qui sommes-nous ?</h2>
 
 <div class="figure">
 <p><img src="./img/logo_avencall.png" alt="logo_avencall.png" />
@@ -48,12 +48,13 @@
 <li>Petite equipe R&amp;D</li>
 <li>Equipe Expert</li>
 <li>Equipe Support</li>
+<li>0 "DevOps"</li>
 
 </ul>
 
 </section>
-<section id="slide-orgc433f26">
-<h3 id="orgc433f26">XiVO Solution</h3>
+<section id="slide-org7c3f734">
+<h3 id="org7c3f734">XiVO Solution</h3>
 
 <div class="figure">
 <p><img src="./img/logo_xivo.png" alt="logo_xivo.png" />
@@ -70,19 +71,27 @@
 </ul>
 
 </section>
-<section id="slide-org6b16a71">
-<h3 id="org6b16a71">XiVO Architecture overview</h3>
+<section id="slide-orgde02add">
+<h3 id="orgde02add">XiVO Architecture overview</h3>
+<p>
+TO BE UPDATED
+<img src="./img/xivo-overview.png" alt="xivo-overview.png" />
+</p>
+
+</section>
+<section id="slide-org11481c4">
+<h3 id="org11481c4">Warning</h3>
 
 <div class="figure">
-<p><img src="./img/xivo-overview.png" alt="xivo-overview.png" />
+<p><img src="./img/dunning-kruger-effect.jpg" alt="dunning-kruger-effect.jpg" />
 </p>
 </div>
 
 </section>
 </section>
 <section>
-<section id="slide-orgcdd1292">
-<h2 id="orgcdd1292">La supervision</h2>
+<section id="slide-org9d9ee29">
+<h2 id="org9d9ee29">La supervision</h2>
 <ul>
 <li class="fragment appear">C'est ennuyant !</li>
 <li class="fragment appear">La plupart du temps, ça ne sert à rien</li>
@@ -98,8 +107,8 @@
 </p>
 
 </section>
-<section id="slide-org5909be2">
-<h3 id="org5909be2">Alors, pourquoi superviser ?</h3>
+<section id="slide-orgc177c5e">
+<h3 id="orgc177c5e">Alors, pourquoi superviser ?</h3>
 <ul>
 <li class="fragment appear">Detecter les crash, Vraiment ?</li>
 <li class="fragment appear">Detecter les problèmes plus subtils</li>
@@ -108,8 +117,8 @@
 </ul>
 
 </section>
-<section id="slide-orge1aca48">
-<h3 id="orge1aca48">Mais aussi</h3>
+<section id="slide-orgd17e012">
+<h3 id="orgd17e012">Mais aussi</h3>
 <ul>
 <li class="fragment appear">Valider des livrables</li>
 <li class="fragment appear">Analyser Post-mortem</li>
@@ -118,8 +127,8 @@
 </ul>
 
 </section>
-<section id="slide-org3a498da">
-<h3 id="org3a498da">Les raisons chez nous ?</h3>
+<section id="slide-orgb8b7e8f">
+<h3 id="orgb8b7e8f">Les raisons chez nous ?</h3>
 
 <div class="figure">
 <p><img src="./img/sky-limit.jpg" alt="sky-limit.jpg" class="fragment appear" />
@@ -129,13 +138,13 @@
 </section>
 </section>
 <section>
-<section id="slide-org8afcc5e">
-<h2 id="org8afcc5e">Nos premières tentatives</h2>
-<div class="outline-text-2" id="text-org8afcc5e">
+<section id="slide-org85bbbae">
+<h2 id="org85bbbae">Nos premières tentatives</h2>
+<div class="outline-text-2" id="text-org85bbbae">
 </div>
 </section>
-<section id="slide-org41f8f90">
-<h3 id="org41f8f90">Home Made</h3>
+<section id="slide-orgacb56d3">
+<h3 id="orgacb56d3">Home Made</h3>
 
 <div class="figure">
 <p><img src="./img/mcgyver.jpg" alt="mcgyver.jpg" />
@@ -143,8 +152,8 @@
 </div>
 
 </section>
-<section id="slide-orge7dcbae">
-<h3 id="orge7dcbae">Mais&#x2026;</h3>
+<section id="slide-org39acf82">
+<h3 id="org39acf82">Mais&#x2026;</h3>
 <ul>
 <li class="fragment appear">Difficile à maintenir</li>
 <li class="fragment appear">Pas de centralisation</li>
@@ -152,8 +161,8 @@
 </ul>
 
 </section>
-<section id="slide-org9d6700d">
-<h3 id="org9d6700d">Evaluations solutions</h3>
+<section id="slide-org167b801">
+<h3 id="org167b801">Evaluations solutions</h3>
 <ul>
 <li class="fragment appear">Nagios</li>
 <li class="fragment appear">Shinken</li>
@@ -163,8 +172,8 @@
 </ul>
 
 </section>
-<section id="slide-org8e67db3">
-<h3 id="org8e67db3">Mise en oeuvre</h3>
+<section id="slide-orgf34ff62">
+<h3 id="orgf34ff62">Mise en oeuvre</h3>
 <ul>
 <li class="fragment appear">docker pour la partie serveur</li>
 <li class="fragment appear">collectd pour la collecte des mesures génériques</li>
@@ -175,13 +184,13 @@
 </section>
 </section>
 <section>
-<section id="slide-org75282c7">
-<h2 id="org75282c7">Metriques</h2>
-<div class="outline-text-2" id="text-org75282c7">
+<section id="slide-org98f03a4">
+<h2 id="org98f03a4">Metriques</h2>
+<div class="outline-text-2" id="text-org98f03a4">
 </div>
 </section>
-<section id="slide-org01b5a6d">
-<h3 id="org01b5a6d">Données non-structurées</h3>
+<section id="slide-org849644e">
+<h3 id="org849644e">Données non-structurées</h3>
 
 <div class="figure">
 <p><img src="./img/log.jpg" alt="log.jpg" />
@@ -189,8 +198,8 @@
 </div>
 
 </section>
-<section id="slide-orga8630c6">
-<h3 id="orga8630c6">Données structurées</h3>
+<section id="slide-org519627c">
+<h3 id="org519627c">Données structurées</h3>
 <ul>
 <li class="fragment appear">Données horodatées</li>
 <li class="fragment appear">Données numériques</li>
@@ -198,8 +207,8 @@
 </ul>
 
 </section>
-<section id="slide-org9abccf7">
-<h3 id="org9abccf7">Système</h3>
+<section id="slide-org10beec9">
+<h3 id="org10beec9">Système</h3>
 <ul>
 <li>CPU</li>
 <li>Mémoire globale/services</li>
@@ -210,8 +219,8 @@
 </ul>
 
 </section>
-<section id="slide-orgbf213b3">
-<h3 id="orgbf213b3">Environnement</h3>
+<section id="slide-org9b4afd0">
+<h3 id="org9b4afd0">Environnement</h3>
 <ul>
 <li>Etat Trunk SIP</li>
 <li>Etat T2</li>
@@ -221,8 +230,8 @@
 </ul>
 
 </section>
-<section id="slide-orgb9ed609">
-<h3 id="orgb9ed609">Application</h3>
+<section id="slide-orga40f4dc">
+<h3 id="orga40f4dc">Application</h3>
 <ul>
 <li>Appels fantomes</li>
 <li>Volumes d'appels</li>
@@ -233,8 +242,8 @@
 </ul>
 
 </section>
-<section id="slide-org50f2021">
-<h3 id="org50f2021">Limites</h3>
+<section id="slide-org19a70ed">
+<h3 id="org19a70ed">Limites</h3>
 <ul>
 <li class="fragment appear">La supervision n'est pas de la BI</li>
 <li class="fragment appear">Distinction entre les données métier et les données techniques</li>
@@ -246,8 +255,8 @@
 </section>
 </section>
 <section>
-<section id="slide-orgf26cb6e">
-<h2 id="orgf26cb6e">Stockage</h2>
+<section id="slide-orgdf48d18">
+<h2 id="orgdf48d18">Stockage</h2>
 <p>
 Doit être pensé très tôt.
 </p>
@@ -260,8 +269,8 @@ Doit être pensé très tôt.
 </section>
 </section>
 <section>
-<section id="slide-orga8e0e45">
-<h2 id="orga8e0e45">Restitution</h2>
+<section id="slide-org896614f">
+<h2 id="org896614f">Restitution</h2>
 <p>
 Deux cas d'usages:
 </p>
@@ -274,8 +283,8 @@ Deux cas d'usages:
 </section>
 </section>
 <section>
-<section id="slide-orgec077ee">
-<h2 id="orgec077ee">Fiabilisation des données</h2>
+<section id="slide-orgb289220">
+<h2 id="orgb289220">Fiabilisation des données</h2>
 <p>
 Un système de supervision est un système qui évolue:
 </p>
@@ -293,10 +302,10 @@ Nécessaire pour l'alerting !
 </section>
 </section>
 <section>
-<section id="slide-org239a28f">
-<h2 id="org239a28f">Alerting</h2>
+<section id="slide-orgcc136a1">
+<h2 id="orgcc136a1">Alerting</h2>
 <ul>
-<li>Un simple écran de supervision ne suffit pas</li>
+<li>Ce n'est pas un simple écran de supervision</li>
 <li>A minima par mail</li>
 <li>Passerelles mail vers *</li>
 
@@ -305,15 +314,26 @@ Nécessaire pour l'alerting !
 </section>
 </section>
 <section>
-<section id="slide-org6be2c27">
-<h2 id="org6be2c27">Conclusion</h2>
+<section id="slide-org66aeb46">
+<h2 id="org66aeb46">Autres étapes</h2>
+<ul>
+<li>Escalade</li>
+<li>Contre-mesures automatisées</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgc245f39">
+<h2 id="orgc245f39">Conclusion</h2>
 <p>
 ???
 </p>
 
 </section>
-<section id="slide-orgf2ababa">
-<h3 id="orgf2ababa">Thank you</h3>
+<section id="slide-org0788de0">
+<h3 id="org0788de0">Thank you</h3>
 <p>
 Question ?
 </p>

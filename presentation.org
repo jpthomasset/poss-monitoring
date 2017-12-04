@@ -16,6 +16,7 @@
 - Petite equipe R&D
 - Equipe Expert 
 - Equipe Support
+- 0 "DevOps"
 
 ** XiVO Solution
 [[./img/logo_xivo.png]]
@@ -27,7 +28,11 @@
 - Couplage téléphonie informatique
 
 ** XiVO Architecture overview
+TO BE UPDATED
 [[./img/xivo-overview.png]]
+
+** Warning
+[[./img/dunning-kruger-effect.jpg]]
 
 * La supervision
 #+ATTR_REVEAL: :frag (appear)
@@ -138,9 +143,13 @@ Un système de supervision est un système qui évolue:
 Nécessaire pour l'alerting !
 
 * Alerting
-- Un simple écran de supervision ne suffit pas
+- Ce n'est pas un simple écran de supervision
 - A minima par mail
 - Passerelles mail vers *
+
+* Autres étapes
+- Escalade
+- Contre-mesures automatisées
 
 * Conclusion
 
