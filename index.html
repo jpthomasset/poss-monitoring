@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Monitoring @ Avencall</title>
+<meta name="author" content="(Jean-Pierre Thomasset)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/solarized.css" id="theme"/>
+
+<link rel="stylesheet" href="style.css"/>
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+
+<section>
+<section id="slide-org9cd32a1">
+<h2 id="org9cd32a1">Monitoring et Supervision d'un système de communications</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf6cf45a">
+<h2 id="orgf6cf45a">Qui sommes-nous ?</h2>
+
+<div class="figure">
+<p><img src="./img/logo_avencall.png" alt="logo_avencall.png" />
+</p>
+</div>
+<ul>
+<li>Editeur Open source</li>
+<li>Petite equipe R&amp;D</li>
+<li>Equipe Expert</li>
+<li>Equipe Support</li>
+
+</ul>
+
+</section>
+<section id="slide-org1fd0dea">
+<h3 id="org1fd0dea">XiVO Solution</h3>
+
+<div class="figure">
+<p><img src="./img/logo_xivo.png" alt="logo_xivo.png" />
+</p>
+</div>
+
+<ul>
+<li>IPBX Open Source basé sur Asterisk™</li>
+<li>Gestion des postes téléphonique</li>
+<li>Routage d'appel</li>
+<li>Solution pour Centre d'appel</li>
+<li>Couplage téléphonie informatique</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc4a90c9">
+<h3 id="orgc4a90c9">XiVO Architecture overview</h3>
+
+<div class="figure">
+<p><img src="./img/xivo-overview.png" alt="xivo-overview.png" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org90bf13d">
+<h2 id="org90bf13d">La supervision</h2>
+<ul>
+<li class="fragment appear">C'est ennuyant !</li>
+<li class="fragment appear">La plupart du temps, ça ne sert à rien</li>
+
+</ul>
+<blockquote  class="fragment appear">
+<p>
+“En supervision, on est de nazes !” <div align="right"><i>E.A.</i></div>
+</p>
+</blockquote>
+<p class="fragment appear">
+(Enfin, surtout personne ne veut le faire)
+</p>
+
+</section>
+<section id="slide-org86b2dc5">
+<h3 id="org86b2dc5">Alors, pourquoi superviser ?</h3>
+<ul>
+<li class="fragment appear">Detecter les crash, Vraiment ?</li>
+<li class="fragment appear">Detecter les problèmes plus subtils</li>
+<li class="fragment appear">Anticiper les problèmes</li>
+
+</ul>
+
+</section>
+<section id="slide-orgb845640">
+<h3 id="orgb845640">Mais aussi</h3>
+<ul>
+<li class="fragment appear">Valider des livrables</li>
+<li class="fragment appear">Analyser Post-mortem</li>
+<li class="fragment appear">Personne ne veut superviser manuellement</li>
+
+</ul>
+
+</section>
+<section id="slide-orga3e7770">
+<h3 id="orga3e7770">Les raisons chez nous ?</h3>
+
+<div class="figure">
+<p><img src="./img/sky-limit.jpg" alt="sky-limit.jpg" class="fragment appear" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org6d7b96e">
+<h2 id="org6d7b96e">Nos premières tentatives</h2>
+<div class="outline-text-2" id="text-org6d7b96e">
+</div>
+</section>
+<section id="slide-orgd5abff7">
+<h3 id="orgd5abff7">Home Made</h3>
+
+<div class="figure">
+<p><img src="./img/mcgyver.jpg" alt="mcgyver.jpg" />
+</p>
+</div>
+
+</section>
+<section id="slide-org1c39914">
+<h3 id="org1c39914">Mais&#x2026;</h3>
+<ul>
+<li class="fragment appear">Difficile à maintenir</li>
+<li class="fragment appear">Pas de centralisation</li>
+
+</ul>
+
+</section>
+<section id="slide-org0a3eef1">
+<h3 id="org0a3eef1">Evaluations solutions</h3>
+<ul>
+<li class="fragment appear">Nagios</li>
+<li class="fragment appear">Shinken</li>
+<li class="fragment appear">Zabbix</li>
+<li class="fragment appear">Grafana, Graphite, collectd</li>
+
+</ul>
+
+</section>
+<section id="slide-org00d0fed">
+<h3 id="org00d0fed">Mise en oeuvre</h3>
+<ul>
+<li class="fragment appear">docker pour la partie serveur</li>
+<li class="fragment appear">collectd pour la collecte des mesures génériques</li>
+<li class="fragment appear">push depuis les applications</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgee2afa2">
+<h2 id="orgee2afa2">Metriques</h2>
+<div class="outline-text-2" id="text-orgee2afa2">
+</div>
+</section>
+<section id="slide-orgd191c3b">
+<h3 id="orgd191c3b">Données non-structurée</h3>
+
+<div class="figure">
+<p><img src="./img/log.jpg" alt="log.jpg" />
+</p>
+</div>
+
+</section>
+<section id="slide-orge53dc94">
+<h3 id="orge53dc94">Données structurée</h3>
+<ul>
+<li class="fragment appear">Données horodatées</li>
+<li class="fragment appear">Données numériques</li>
+
+</ul>
+
+</section>
+<section id="slide-org25f4773">
+<h3 id="org25f4773">Système</h3>
+<ul>
+<li>CPU</li>
+<li>Mémoire globale/services</li>
+<li>Espace Disque</li>
+<li>IO</li>
+<li>Failures Disque/IO/&#x2026;</li>
+
+</ul>
+
+</section>
+<section id="slide-org02d3743">
+<h3 id="org02d3743">Environnement</h3>
+<ul>
+<li>Etat Trunk SIP</li>
+<li>Etat T2</li>
+<li>Etat Postes</li>
+<li>Glissement d'horloge</li>
+
+</ul>
+
+</section>
+<section id="slide-org1dfe761">
+<h3 id="org1dfe761">Application</h3>
+<ul>
+<li>Appels fantomes</li>
+<li>Volumes d'appels</li>
+<li>Evènements reçus/traités</li>
+<li>JVM Memory Allocation</li>
+<li>Compteurs internes</li>
+
+</ul>
+
+</section>
+<section id="slide-org2b3aab8">
+<h3 id="org2b3aab8">Limites</h3>
+<ul>
+<li class="fragment appear">La supervision n'est pas de la BI</li>
+<li class="fragment appear">Distinction entre les données métier et les données techniques</li>
+<li class="fragment appear">Sécurité des données</li>
+<li class="fragment appear">Ethique ! (données personnelles où sensibles)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf992f78">
+<h2 id="orgf992f78">Stockage</h2>
+<p>
+Doit être pensé très tôt.
+</p>
+<ul>
+<li class="fragment appear">Retention</li>
+<li class="fragment appear">Granularité</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgda97374">
+<h2 id="orgda97374">Restitution</h2>
+<p>
+Deux cas d'usages:
+</p>
+<ul>
+<li class="fragment appear">Supervision haut niveau</li>
+<li class="fragment appear">Analyse fine post-mortem de quelques KPIs</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org516f0a1">
+<h2 id="org516f0a1">Fiabilisation des données</h2>
+<p>
+Un système de supervision est un système qui évolue:
+</p>
+<ul>
+<li class="fragment appear">En fonction des applications</li>
+<li class="fragment appear">En fonction des besoins</li>
+<li class="fragment appear">En fonction de l'expérience</li>
+
+</ul>
+
+<p>
+Nécessaire pour l'alerting !
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org3ac15f9">
+<h2 id="org3ac15f9">Alerting</h2>
+<ul>
+<li>Un simple écran de supervision ne suffit pas</li>
+<li>A minima par mail</li>
+<li>Passerelles mail vers *</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbd4913b">
+<h2 id="orgbd4913b">Conclusion</h2>
+<p>
+???
+</p>
+
+</section>
+<section id="slide-orgdf8ba71">
+<h3 id="orgdf8ba71">Thank you</h3>
+<p>
+Question ?
+</p>
+
+<p>
+<a href="https://github.com/jpthomasset/poss-monitoring">https://github.com/jpthomasset/poss-monitoring</a>
+</p>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
