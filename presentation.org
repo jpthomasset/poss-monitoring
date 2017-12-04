@@ -12,51 +12,141 @@
 
 * Qui sommes-nous ?
 [[./img/logo_avencall.png]]
-- Open source software editor
+- Editeur Open source
+- Petite equipe R&D
+- Equipe Expert 
+- Equipe Support
 
 ** XiVO Solution
 [[./img/logo_xivo.png]]
 
-- Open Source IPBX based on Asterisk™ 
-- Phone Device Management
-- Call routing
-- Call Center Solution 
-- Computer telephony Integration
+- IPBX Open Source basé sur Asterisk™ 
+- Gestion des postes téléphonique
+- Routage d'appel
+- Solution pour Centre d'appel
+- Couplage téléphonie informatique
 
 ** XiVO Architecture overview
 [[./img/xivo-overview.png]]
 
-* Pourquoi superviser
-- Notification en cas de problème
-- Anticipation des problèmes
-- Post-mortem
+* La supervision
+#+ATTR_REVEAL: :frag (appear)
+- C'est ennuyant !
+- La plupart du temps, ça ne sert à rien
+#+ATTR_REVEAL: :frag appear
+#+BEGIN_QUOTE
+“En supervision, on est de nazes !” @@html:<div align="right"><i>E.A.</i></div>@@
+#+END_QUOTE
+#+ATTR_REVEAL: :frag appear
+(Enfin, surtout personne ne veut le faire)
 
-* Premières tentatives
+** Alors, pourquoi superviser ?
+#+ATTR_REVEAL: :frag (appear)
+- Detecter les crash, Vraiment ?
+- Detecter les problèmes plus subtils
+- Anticiper les problèmes
 
-** Embarqué
-Mono serveur
+** Mais aussi
+#+ATTR_REVEAL: :frag (appear)
+- Valider des livrables
+- Analyser Post-mortem
+- Personne ne veut superviser manuellement
+
+** Les raisons chez nous ?
+#+ATTR_REVEAL: :frag appear
+[[./img/sky-limit.jpg]]
+
+* Nos premières tentatives
+
+** Home Made
+[[./img/mcgyver.jpg]]
+
+** Mais...
+#+ATTR_REVEAL: :frag (appear)
+- Difficile à maintenir
+- Pas de centralisation
 
 ** Evaluations solutions
+#+ATTR_REVEAL: :frag (appear)
+- Nagios
+- Shinken
+- Zabbix
+- Grafana, Graphite, collectd
 
-- nagios
-- shinken
-- grafana, graphite, collectd
+** Mise en oeuvre
+#+ATTR_REVEAL: :frag (appear)
+- docker pour la partie serveur
+- collectd pour la collecte des mesures génériques
+- push depuis les applications
 
-* Monitoring overview
+* Metriques
 
-* Metriques ?
-- données non structurées vs données structurées
+** Données non-structurée
+[[./img/log.jpg]]
+
+** Données structurée
+#+ATTR_REVEAL: :frag (appear)
+- Données horodatées
+- Données numériques
 
 ** Système
+- CPU
+- Mémoire globale/services
+- Espace Disque
+- IO
+- Failures Disque/IO/...
+
+** Environnement
+- Etat Trunk SIP
+- Etat T2
+- Etat Postes
+- Glissement d'horloge
 
 ** Application
+- Appels fantomes
+- Volumes d'appels
+- Evènements reçus/traités
+- JVM Memory Allocation
+- Compteurs internes
 
 ** Limites
+#+ATTR_REVEAL: :frag (appear)
+- La supervision n'est pas de la BI
+- Distinction entre les données métier et les données techniques
+- Sécurité des données
+- Ethique ! (données personnelles où sensibles)
 
-Métier, éthique
-
-* Stockage ? 
+* Stockage
+Doit être pensé très tôt.
+#+ATTR_REVEAL: :frag (appear)
+- Retention
+- Granularité
 
 * Restitution
+Deux cas d'usages:
+#+ATTR_REVEAL: :frag (appear)
+- Supervision haut niveau
+- Analyse fine post-mortem de quelques KPIs
+
+* Fiabilisation des données
+Un système de supervision est un système qui évolue:
+#+ATTR_REVEAL: :frag (appear)
+- En fonction des applications
+- En fonction des besoins
+- En fonction de l'expérience
+
+Nécessaire pour l'alerting !
 
 * Alerting
+- Un simple écran de supervision ne suffit pas
+- A minima par mail
+- Passerelles mail vers *
+
+* Conclusion
+
+???
+
+** Thank you
+Question ?
+
+https://github.com/jpthomasset/poss-monitoring
