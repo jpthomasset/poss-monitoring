@@ -182,6 +182,11 @@ Nécessaire pour l'alerting !
 
 Question ?
 
-https://github.com/jpthomasset/poss-monitoring
+\\
 
-par [[https://twitter.com/misterjp][@misterjp]]
+-----
+@@html:<small>@@
+https://github.com/jpthomasset/poss-monitoring
+\\
+[[https://twitter.com/misterjp][@misterjp]]
+@@html:</small>@@
