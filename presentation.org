@@ -9,13 +9,19 @@
 
 
 * Monitoring et Supervision d'un système de communications
+Jean-Pierre Thomasset @ XiVO
 
 * Qui sommes-nous ?
-[[./img/logo_avencall.png]]
+[[./img/logo_xivo.png]]
 - Editeur Open source
-- Petite equipe R&D
+- Equipe R&D
 - Equipe Expert 
 - Equipe Support
+
+** R&D Team
+- Principalement des développeurs
+- Adepte du TDD
+- Wanabee FP
 - 0 "DevOps"
 
 ** XiVO Solution
@@ -26,10 +32,6 @@
 - Routage d'appel
 - Solution pour Centre d'appel
 - Couplage téléphonie informatique
-
-** XiVO Architecture overview
-TO BE UPDATED
-[[./img/xivo-overview.png]]
 
 ** Warning
 [[./img/dunning-kruger-effect.jpg]]
@@ -70,14 +72,24 @@ TO BE UPDATED
 #+ATTR_REVEAL: :frag (appear)
 - Fonctionnalités limitées
 - Difficile à maintenir
-- Pas de centralisation
+- Embarqué sur chaque serveur ⚠
+- Pas de consolidation
 
-** Evaluations solutions
+** Evaluation solutions
 #+ATTR_REVEAL: :frag (appear)
 - Nagios
 - Shinken
 - Zabbix
 - Grafana, Graphite, collectd
+
+** Grafana, Graphite, Collectd
+#+ATTR_REVEAL: :frag (appear)
+- Facilité de déploiement / mise à jour
+- Nécessite peu de maintenance
+- Collecteurs disponibles directement
+- Courbe d'apprentissage rapide
+- Basique mais simple
+- Developer friendly
 
 ** Mise en oeuvre
 #+ATTR_REVEAL: :frag (appear)
@@ -95,7 +107,7 @@ TO BE UPDATED
 - Données horodatées
 - Données numériques
 - Source
-- Categorisation
+- Categorisation (Naming/Tagging)
 
 ** Système
 - CPU
@@ -117,6 +129,10 @@ TO BE UPDATED
 - JVM Memory Allocation
 - Compteurs internes
 
+** Et même l'intégration continue !
+- Supervision de la charge générée
+- Supervision des mises à jours
+
 ** Limites
 #+ATTR_REVEAL: :frag (appear)
 - La supervision n'est pas de la BI
@@ -129,28 +145,32 @@ Doit être pensé très tôt.
 #+ATTR_REVEAL: :frag (appear)
 - Rétention
 - Granularité
+- La combinaison des deux
 
 * Restitution
 Deux cas d'usages:
 #+ATTR_REVEAL: :frag (appear)
-- Supervision haut niveau
+- Supervision haut niveau (Tableau de bord)
 - Analyse fine post-mortem de quelques KPIs
 
 * Fiabilisation des données
-Un système de supervision est un système qui évolue:
+Un système de supervision est un système qui évolue !
 #+ATTR_REVEAL: :frag (appear)
 - En fonction des applications
 - En fonction des besoins
 - En fonction de l'expérience
 
+#+ATTR_REVEAL: :frag appear
 Nécessaire pour l'alerting !
 
 * Alerting
+#+ATTR_REVEAL: :frag (appear)
 - Ce n'est pas un simple écran de supervision
 - A minima par mail
 - Passerelles mail vers *
 
 * Autres étapes
+#+ATTR_REVEAL: :frag (appear)
 - Escalade
 - Contre-mesures automatisées
 
@@ -159,6 +179,9 @@ Nécessaire pour l'alerting !
 ???
 
 ** Thank you
+
 Question ?
 
 https://github.com/jpthomasset/poss-monitoring
+
+par [[https://twitter.com/misterjp][@misterjp]]
