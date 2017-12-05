@@ -30,8 +30,9 @@ Jean-Pierre Thomasset @ XiVO
 - IPBX Open Source basé sur Asterisk™ 
 - Gestion des postes téléphonique
 - Routage d'appel
-- Solution pour Centre d'appel
 - Couplage téléphonie informatique
+- Solution pour Centre d'appel
+- Solution de communication unifiée
 
 ** Warning
 [[./img/dunning-kruger-effect.jpg]]
@@ -138,7 +139,7 @@ Jean-Pierre Thomasset @ XiVO
 - La supervision n'est pas de la BI
 - Distinction entre les données métier et les données techniques
 - Sécurité des données
-- Ethique ! (données personnelles où sensibles)
+- Ethique ! (données personnelles ou sensibles)
 
 * Stockage
 Doit être pensé très tôt.
