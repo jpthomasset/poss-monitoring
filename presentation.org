@@ -19,6 +19,10 @@ Jean-Pierre Thomasset @ XiVO
 - Equipe Expert 
 - Equipe Support
 
+#+BEGIN_NOTES
+GPL / LGPL
+#+END_NOTES
+
 ** R&D Team
 #+ATTR_REVEAL: :frag (appear)
 - Principalement des développeurs
@@ -36,6 +40,14 @@ Jean-Pierre Thomasset @ XiVO
 - Couplage téléphonie informatique
 - Solution pour Centre d'appel
 - Solution de communication unifiée
+
+#+BEGIN_NOTES
+Applications 
+- Web-Agent
+- Web-Assistant
+- Versions desktop
+#+END_NOTES
+
 
 ** Warning
 [[./img/dunning-kruger-effect.jpg]]
