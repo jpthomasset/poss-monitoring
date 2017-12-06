@@ -208,7 +208,9 @@ FLOSS needs $, contributer, reviewer,...
 
 #+BEGIN_NOTES
 Voir talk de 
-- Heather Miller - The dramatic consequences of the Open Source revolution
+- Heather Miller 
+  - The dramatic consequences of the Open Source revolution
+  - The Truck Factor
 - Sam Halliday
 - Bodil Stokke
 #+END_NOTES
