@@ -14,7 +14,7 @@ Jean-Pierre Thomasset @ XiVO
 * Qui sommes-nous ?
 [[./img/logo_xivo.png]]
 - Editeur Open source
-- Lyon, Paris, Toulouse, Rennes
+- Lyon, Paris, Toulouse, Rennes, Pragues
 - Equipe R&D
 - Equipe Expert 
 - Equipe Support
