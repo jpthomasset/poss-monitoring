@@ -181,7 +181,7 @@ Un système de supervision est un système qui évolue !
 #+ATTR_REVEAL: :frag appear
 Nécessaire pour l'alerting !
 
-* Alerting
+** Alerting
 #+ATTR_REVEAL: :frag (appear)
 - Ce n'est pas un simple écran de supervision
 - A minima par mail
@@ -192,15 +192,27 @@ Nécessaire pour l'alerting !
 - Escalade
 - Contre-mesures automatisées
 
-** Conclusion
+* Conclusion
 #+ATTR_REVEAL: :frag (appear)
 - Vrai sujet -> vrai bénéfice
 - Investissement nécessaire
 - Etape par étape
-- Impliquer tout le monde
-- Can be fun
+- C'est l'affaire de tous
+- Fun !
 
-** Merci ☺
+* One Last Thing...
+We ♥ FLOSS !
+
+#+ATTR_REVEAL: :frag appear
+FLOSS needs $, contributer, reviewer,...
+
+#+BEGIN_NOTES
+Voir talk de 
+- Heather Miller - The dramatic consequences of the Open Source revolution
+- Sam Halliday
+- Bodil Stokke
+#+END_NOTES
+* Merci ☺
 
 Question ?
 
