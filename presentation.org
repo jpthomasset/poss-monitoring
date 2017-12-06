@@ -14,11 +14,13 @@ Jean-Pierre Thomasset @ XiVO
 * Qui sommes-nous ?
 [[./img/logo_xivo.png]]
 - Editeur Open source
+- Lyon, Paris, Toulouse, Rennes
 - Equipe R&D
 - Equipe Expert 
 - Equipe Support
 
 ** R&D Team
+#+ATTR_REVEAL: :frag (appear)
 - Principalement des développeurs
 - Adepte du TDD
 - Wanabee FP
@@ -27,6 +29,7 @@ Jean-Pierre Thomasset @ XiVO
 ** XiVO Solution
 [[./img/logo_xivo.png]]
 
+#+ATTR_REVEAL: :frag (appear)
 - IPBX Open Source basé sur Asterisk™ 
 - Gestion des postes téléphonique
 - Routage d'appel
@@ -125,8 +128,8 @@ Jean-Pierre Thomasset @ XiVO
 
 ** Application
 - Appels fantomes
-- Volumes d'appels
-- Evènements reçus/traités
+- Volume d'appels
+- Evénements reçus/traités
 - JVM Memory Allocation
 - Compteurs internes
 
@@ -137,9 +140,12 @@ Jean-Pierre Thomasset @ XiVO
 ** Limites
 #+ATTR_REVEAL: :frag (appear)
 - La supervision n'est pas de la BI
-- Distinction entre les données métier et les données techniques
+- Distinction entre les données métiers et les données techniques
 - Sécurité des données
-- Ethique ! (données personnelles ou sensibles)
+
+** Ethique
+[[./img/vader.jpg]]
+données personnelles ou sensibles
 
 * Stockage
 Doit être pensé très tôt.
@@ -175,11 +181,13 @@ Nécessaire pour l'alerting !
 - Escalade
 - Contre-mesures automatisées
 
-* Conclusion
+** Conclusion
+#+ATTR_REVEAL: :frag (appear)
+- Vrai sujet -> vrai bénéfice
+- Investissement nécessaire
+- Etape par étape
 
-???
-
-** Thank you
+** Merci ☺
 
 Question ?
 
