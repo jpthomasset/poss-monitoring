@@ -102,6 +102,8 @@ Jean-Pierre Thomasset @ XiVO
 - Push depuis les applications (simple socket)
 
 * Metriques
+Quelles données ?
+Quelle pertinence ?
 
 ** Données non-structurées
 [[./img/log.jpg]]
@@ -145,7 +147,8 @@ Jean-Pierre Thomasset @ XiVO
 
 ** Ethique
 [[./img/vader.jpg]]
-données personnelles ou sensibles
+
+Données personnelles ou sensibles
 
 * Stockage
 Doit être pensé très tôt.
@@ -155,10 +158,18 @@ Doit être pensé très tôt.
 - La combinaison des deux
 
 * Restitution
-Deux cas d'usages:
-#+ATTR_REVEAL: :frag (appear)
-- Supervision haut niveau (Tableau de bord)
-- Analyse fine post-mortem de quelques KPIs
+Deux cas d'usages chez XiVO
+
+
+** Restitution - Dashboard
+[[./img/dashboard.png]]
+
+Supervision haut niveau
+
+** Restitution - Detail
+[[./img/dashboard-detail.png]]
+
+Analyse fine de quelques KPIs & Post-mortem
 
 * Fiabilisation des données
 Un système de supervision est un système qui évolue !
@@ -186,6 +197,8 @@ Nécessaire pour l'alerting !
 - Vrai sujet -> vrai bénéfice
 - Investissement nécessaire
 - Etape par étape
+- Impliquer tout le monde
+- Can be fun
 
 ** Merci ☺
 
